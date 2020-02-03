@@ -1,0 +1,141 @@
+
+DONE - check that multi touch works
+DONE - vibrate when minigame opens
+DONE - avoid z fighting with a spawn index or whatever
+DONE - make map work with multiple players
+DONE - chopping icon when in game
+SKIP - tree you're at should stop flashing when ur in the game
+DONE - can quit logging minigame
+DONE - tower building
+DONE - tower repairing
+DONE - tower's shooting
+DONE - tower's deal monster damage
+DONE - monster health bars
+DONE - players attacking
+
+DONE - get correct players actually populating at good spots
+DONE - fix minigame stuck bug
+
+
+
+- monster
+- 1 more character
+- music
+
+
+
+- design a new map
+- remove the castle
+
+- bard song
+- thief attack
+- engineer attack
+
+- monsters attacking
+- waves spawn
+- kamikaze monster
+- towers take damage
+- tower health bars
+- castle takes damage
+
+
+- Lock tree / building interactions to only one person at a time
+- use a colored arrow above trees and towers to indicate you can interact with them
+
+
+
+For Later:
+- if a player dies, the minigames need to exit
+- if a player takes damage while in a minigame, the game should exit or show a dmg overlay
+
+
+
+
+
+
+
+- finish lobby experience
+	- start button
+	- count down
+
+- map
+	- player running around
+	- A* monsters
+
+
+
+
+
+
+- also could build this with my original 2 interface idea
+
+Main Screen:
+- shows the full map
+
+Smartphone:
+- a player's controller
+- smartphone users look at the main screen to play
+
+iPad:
+- the "commander's" ui
+- shows the fullmap and ui to build towers
+
+
+
+Server side will need the makeup of the level
+- needs to be able to run Physics
+- doesn't need all of the textures and all that shit, er wait actually it will because its the screen
+
+
+
+GAME
+- Map
+- Character running around
+- Physics
+
+AIRCONSOL
+- Synced player positions
+
+ENGINE
+- ScreenManager
+- Storage
+- Analaytics support
+- FPS meter
+- BMP movie clip sprite
+
+SPLASH
+- Simple html splash and load bar would be fine
+
+
+/*
+	Builder
+		Speed	++
+		Attack	++
+		Defense	+++
+		Build	++++
+		Special: Shit out a defensive wall that takes no time to build at all and enemies are attracted to it
+
+	Thief
+		Speed	++++
+		Attack	+++
+		Defense	++
+		Build	++
+		Special: Lay a trap that will explode when enemies hit it
+
+	Fighter
+		Speed	+++
+		Attack	++++
+		Defense	+++
+		Build	+
+		Special: Enter a defensive stance that makes you invincible, but knocks you back just a tad when you get hit
+	
+	Bard
+		Speed	+++
+		Attack	+++
+		Defense	++
+		Build	+++
+		Special: Play a song that heals friendly players and slightly slows/damages enemies
+
+
+
+	*/

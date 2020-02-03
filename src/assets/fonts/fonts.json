@@ -1,0 +1,16 @@
+[
+	{
+		"src": "src/assets/fonts/OpenSans-Bold.ttf",
+		"family": "OpenSans",
+		"weight": "bold",
+		"style": "normal",
+		"variant": "normal"
+	},
+	{
+		"src": "src/assets/fonts/gothamBlack.ttf",
+		"family": "Gotham Black",
+		"weight": "normal",
+		"style": "normal",
+		"variant": "normal"
+	}
+]
