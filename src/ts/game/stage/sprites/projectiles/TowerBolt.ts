@@ -43,7 +43,7 @@ class TowerBolt extends MapObjBmp implements EffectSprite
 	public readonly targetChest:number = -40;
 	public readonly hitRadius:number = 20;
 	public readonly speed:number = 1200;
-	public readonly damage:number = 50;
+	public readonly damage:number = 25;
 
 	public readonly fireX:number;
 	public readonly fireY:number;

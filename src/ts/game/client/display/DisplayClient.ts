@@ -276,7 +276,7 @@ class $DisplayClient
 			if (playerSlot.isPresent /*&& playerSlot.minigameStatus === MinigameStatus.Logging*/ && playerSlot.choppingTree)
 			{
 				// Change the health
-				playerSlot.choppingTree.health -= playerSlot.job.build * 2;	// 10 swipes for an engineer with a 5pt build rating
+				playerSlot.choppingTree.health -= playerSlot.job.build * 6;	// 10 swipes for an engineer with a 5pt build rating
 				if (playerSlot.choppingTree.health < 0) playerSlot.choppingTree.health = 0;
 				for (let slot of this.room.playerSlots)
 				{
@@ -320,7 +320,7 @@ class $DisplayClient
 			let playerSlot:PlayerSlot = this.room.getPlayerSlot(deviceId);
 			if (playerSlot.isPresent /*&& playerSlot.minigameStatus === MinigameStatus.Building*/ && playerSlot.repairingBuilding)
 			{
-				playerSlot.repairingBuilding.health += playerSlot.job.build * 2;	// 10 swipes for an engineer with a 5pt build rating
+				playerSlot.repairingBuilding.health += playerSlot.job.build * 30;	// 10 swipes for an engineer with a 5pt build rating
 				if (playerSlot.repairingBuilding.health > 100) playerSlot.repairingBuilding.health = 100;
 				for (let slot of this.room.playerSlots)
 				{

@@ -7607,32 +7607,6 @@ var Assets = new (/** @class */ (function () {
                 baddie_frames0023: "images/baddie/frames0023.png",
                 baddie_frames0024: "images/baddie/frames0024.png",
                 Castle: "images/Castle.png",
-                engineer_blue_Player_Dwarf_Blue0001: "images/engineer/blue/Player_Dwarf_Blue0001.png",
-                engineer_blue_Player_Dwarf_Blue0002: "images/engineer/blue/Player_Dwarf_Blue0002.png",
-                engineer_blue_Player_Dwarf_Blue0003: "images/engineer/blue/Player_Dwarf_Blue0003.png",
-                engineer_blue_Player_Dwarf_Blue0004: "images/engineer/blue/Player_Dwarf_Blue0004.png",
-                engineer_blue_Player_Dwarf_Blue0005: "images/engineer/blue/Player_Dwarf_Blue0005.png",
-                engineer_blue_Player_Dwarf_Blue0006: "images/engineer/blue/Player_Dwarf_Blue0006.png",
-                engineer_blue_Player_Dwarf_Blue0007: "images/engineer/blue/Player_Dwarf_Blue0007.png",
-                engineer_blue_Player_Dwarf_Blue0008: "images/engineer/blue/Player_Dwarf_Blue0008.png",
-                engineer_blue_Player_Dwarf_Blue0009: "images/engineer/blue/Player_Dwarf_Blue0009.png",
-                engineer_blue_Player_Dwarf_Blue0010: "images/engineer/blue/Player_Dwarf_Blue0010.png",
-                engineer_blue_Player_Dwarf_Blue0011: "images/engineer/blue/Player_Dwarf_Blue0011.png",
-                engineer_blue_Player_Dwarf_Blue0012: "images/engineer/blue/Player_Dwarf_Blue0012.png",
-                engineer_blue_Player_Dwarf_Blue0013: "images/engineer/blue/Player_Dwarf_Blue0013.png",
-                engineer_blue_Player_Dwarf_Blue0014: "images/engineer/blue/Player_Dwarf_Blue0014.png",
-                engineer_blue_Player_Dwarf_Blue0015: "images/engineer/blue/Player_Dwarf_Blue0015.png",
-                engineer_blue_Player_Dwarf_Blue0016: "images/engineer/blue/Player_Dwarf_Blue0016.png",
-                engineer_blue_Player_Dwarf_Blue0017: "images/engineer/blue/Player_Dwarf_Blue0017.png",
-                engineer_blue_Player_Dwarf_Blue0018: "images/engineer/blue/Player_Dwarf_Blue0018.png",
-                engineer_blue_Player_Dwarf_Blue0019: "images/engineer/blue/Player_Dwarf_Blue0019.png",
-                engineer_blue_Player_Dwarf_Blue0020: "images/engineer/blue/Player_Dwarf_Blue0020.png",
-                engineer_blue_Player_Dwarf_Blue0021: "images/engineer/blue/Player_Dwarf_Blue0021.png",
-                engineer_blue_Player_Dwarf_Blue0022: "images/engineer/blue/Player_Dwarf_Blue0022.png",
-                engineer_blue_Player_Dwarf_Blue0023: "images/engineer/blue/Player_Dwarf_Blue0023.png",
-                engineer_blue_Player_Dwarf_Blue0024: "images/engineer/blue/Player_Dwarf_Blue0024.png",
-                engineer_blue_Player_Dwarf_Blue0025: "images/engineer/blue/Player_Dwarf_Blue0025.png",
-                engineer_blue_Player_Dwarf_Blue0026: "images/engineer/blue/Player_Dwarf_Blue0026.png",
                 fighter_blue_fighter0001: "images/fighter/blue/fighter0001.png",
                 fighter_blue_fighter0002: "images/fighter/blue/fighter0002.png",
                 fighter_blue_fighter0003: "images/fighter/blue/fighter0003.png",
@@ -9191,7 +9165,7 @@ var $DisplayClient = /** @class */ (function () {
             var playerSlot = this.room.getPlayerSlot(deviceId);
             if (playerSlot.isPresent /*&& playerSlot.minigameStatus === MinigameStatus.Logging*/ && playerSlot.choppingTree) {
                 // Change the health
-                playerSlot.choppingTree.health -= playerSlot.job.build * 2; // 10 swipes for an engineer with a 5pt build rating
+                playerSlot.choppingTree.health -= playerSlot.job.build * 6; // 10 swipes for an engineer with a 5pt build rating
                 if (playerSlot.choppingTree.health < 0)
                     playerSlot.choppingTree.health = 0;
                 for (var _i = 0, _a = this.room.playerSlots; _i < _a.length; _i++) {
@@ -9228,7 +9202,7 @@ var $DisplayClient = /** @class */ (function () {
         else if (data.type === "HitNail" /* HitNail */) {
             var playerSlot = this.room.getPlayerSlot(deviceId);
             if (playerSlot.isPresent /*&& playerSlot.minigameStatus === MinigameStatus.Building*/ && playerSlot.repairingBuilding) {
-                playerSlot.repairingBuilding.health += playerSlot.job.build * 2; // 10 swipes for an engineer with a 5pt build rating
+                playerSlot.repairingBuilding.health += playerSlot.job.build * 30; // 10 swipes for an engineer with a 5pt build rating
                 if (playerSlot.repairingBuilding.health > 100)
                     playerSlot.repairingBuilding.health = 100;
                 for (var _d = 0, _e = this.room.playerSlots; _d < _e.length; _d++) {
@@ -10875,7 +10849,7 @@ var TowerBolt = /** @class */ (function (_super) {
         _this.targetChest = -40;
         _this.hitRadius = 20;
         _this.speed = 1200;
-        _this.damage = 50;
+        _this.damage = 25;
         _this.fireX = fireX;
         _this.fireY = fireY;
         _this.regX = 0;
@@ -11182,8 +11156,8 @@ var GruntSprite = /** @class */ (function (_super) {
     __extends(GruntSprite, _super);
     function GruntSprite(map, spawn) {
         var _this = _super.call(this, map, Assets.images.baddie_frames0001) || this;
-        _this.health = 100; //900;
-        _this.fullHealth = 100; //900;
+        _this.health = 300; //900;
+        _this.fullHealth = 300; //900;
         _this.damage = 10; //100;
         _this.speed = 200; // 100; //500;
         _this.target = null;

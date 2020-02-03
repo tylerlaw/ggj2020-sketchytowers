@@ -9,8 +9,8 @@ const enum GruntState
 
 class GruntSprite extends MonsterSprite
 {
-	public health:number = 100; //900;
-	public fullHealth:number = 100; //900;
+	public health:number = 300; //900;
+	public fullHealth:number = 300; //900;
 	public damage:number = 10; //100;
 	public speed:number = 200; // 100; //500;
 
